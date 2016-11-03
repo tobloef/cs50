@@ -1,0 +1,11 @@
+0.  Pneumonoultramicroscopicsilicovolcanoconiosis is an artificial long word said to mean a lung disease caused by inhaling very fine ash and sand dust. It is also seemingly the longest word in the large dictionary.
+1.  getrusage returns the resource usage for its parameter "who".
+2.  16.
+3.  Passing a large struct like rusage is costly, so passing the pointer is more efficient.
+4.  Speller.c will take a file and read its content character by character. If the characters are a letter or an apostrophe, the characters will get appended to a word. If, during this process, the program encounters a number or the word is above the defined max length for a word, the word is scrapped and the loop will move on to the next word. This process of adding letters to a word goes on until a non-alphanumerical character (that isn't an apostrophe) found. Then the word is counted, check for spelling and printed. The time is takes to complete spellchecking is also logged.
+5.  Using fscanf would in this case limit our flexibility, as checking whether the word has any digits wouldn't be possible using just fscanf. Also by reading the text one character at a time we avoid having to allocate memory for each word, which would be porblematic since the words can be any size.
+6.  To assure that no changes are made to the parameters. The words shouldn't change while being checked, nor should the dictionary get modified while it is being loaded.
+7.  I used a trie, with a nodes containing a list of tries and a boolean declaring whether the branch is a word.
+8.  0.04 seconds
+9.  I didn't do much changing, as the code was running pretty great. I did check for memory leaks though.
+10. The unloading is a bit slow on older laptops.

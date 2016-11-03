@@ -1,0 +1,46 @@
+node = (Char char, Boolean isWord, List branch)
+
+list loadDictionary():
+ root = []
+ curBranch = root
+ curNode = null
+
+ for each character in file:
+  if character not newline:
+   character = toLower(character)
+   if curNode != null
+    if curNode.branch == null:
+     curNode.branch = new List
+    curBranch = curNode.branch
+   for each node in curBranch:
+    if node.char == character:
+     curNode = node
+     next character in file
+   newNode = node(character, false, null)
+   put newNode at end of curBranch
+   curNode = newNode
+  else:
+   curNode.isWord = true
+   curBranch = root
+   curNode = null
+ return root
+
+
+boolean isWord():
+ curBranch = root
+ curNode = null
+
+ for each character in word:
+  if curNode != null
+   if curNode.branch == null:
+    return false
+   curBranch = curNode.branch
+  for each node in curBranch:
+   if character == node.char:
+    curNode = node
+    next character in word
+  return false
+ return curNode.isWord
+
+check if greater
+malloc

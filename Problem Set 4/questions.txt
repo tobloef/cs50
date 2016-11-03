@@ -1,0 +1,19 @@
+0.  The normal 24-bit versions of PNG, BMP and JPEG all support 16,777,216 colours. GIFs only support 256.
+1.  Of the four formats mentioned, only GIF supports animations.
+2.  Loseless compression preserves the original file and its quality, while lossy compression generally reduces the file size by removing unnecessary bits of data, meaning you won't be able to perfectly restore the original file after it has been compressed.
+3.  Of the four formats mentioned, only JPEGs use lossy compression.
+4.  FAT marks the file's directory as deleted and allocate its sectors to the list of free sectors which can be used to store data on. The file itself isn't ereased upon the actual deletion, but rather later when the file's sectors gets overwritten.
+5.  The actual file would have to be repeatedly ovewritten by some some other data, either random ones and zeroes or just zeroes. This can be done using various free tools, such as the linux's dd command.
+6.  stdint.h is the header file for a standard C library which declares several types of integers with specific widths.
+7.  These data types are a fixed widths, meaning that they will always have the same size. This assures that the program will work across different architecture.
+8.  BYTE is 1 byte, WORD is 2 bytes and DWORD and LONG are each 4 bytes.
+9.  "BM" in ASCII, "42 4d" in hexadecimal
+10. bfSize is the entire file's size in bytes, while biSize is the size the BITMAPINFOHEADER in bytes.
+11. If biHeight is negative, the file image is stored in top-down order, as opposed to bottom-up when biHeight is positive
+12. biBitCount specifies the image's colour depth.
+13. This can happen if the program was unable to open the file. This can for exmaple happen if the user has insufficient permissions or if there's insufficient storage space available
+14. The third argument defined how many times we want to read the number of bytes provided in argument 2 from the file. We always use 1 since we only want to read one structure at a time.
+15. Then the padding will be 3
+16. fseek moves file position of the stream forwards or backwards
+17. SEEK_CUR indicates the current position on the stream
+18. It appears to be Rob Bowden holding a kitty!
